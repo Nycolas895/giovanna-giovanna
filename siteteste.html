@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #dd0ac1;
+        }
+        .imagem-container, .texto-final {
+            display: none; /* Elementos ocultos inicialmente */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .subtitulo {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IMAGENS QUE PROVAM SUA COR VERDADEIRA...</h1>
+        <p> ESTE É SÓ O COMEÇO!! </p>
+        <p> <strong>Durante anos, Giovanna jurou que era ‘Branca’, culpando o sol por qualquer variação de tom.
+            Mas um dia, sem filtros, sem luz estratégica, sem desculpas, se olhou no espelho e teve que admitir: ‘Ok... talvez eu não seja branca. Talvez eu nunca tenha sido.’ 
+            A base sempre ficava acinzentada, as fotos nunca batiam com a ‘cor que ela achava que tinha’, e os amigos riam quando ela insistia em se chamar de ‘branca’.
+            No fundo, ela sabia. Só faltava aceitar.  
+            Respirou fundo, e olhou para a própria pele. ‘É... eu sou preta. </strong> </p>
+        <button onclick="mostrarImagem('imagem1-container')">Mostrar Imagem 1</button>
+        <button onclick="mostrarImagem('imagem2-container'); mostrarTextoFinal()">Mostrar Imagem 2</button>
+        <br>
+
+        <div id="imagem1-container" class="imagem-container">
+            <img id="imagem1" src="preto.png.png" alt="Imagem 1">
+            <p class="subtitulo"><strong> AQUI ESTÁ UMA FOTO Q MOSTRA SUA COR VERDADEIRA. </strong></p>
+        </div>
+
+        <div id="imagem2-container" class="imagem-container">
+            <img id="imagem2" src="mmacaco.jpeg" alt="Imagem 2">
+            <p class="subtitulo"><strong>JÁ NESSA FOTO PODEMOS VER VOCÊ COM SUA VERDADEIRA FAMILIA.</strong></p>
+        </div>
+        
+        <p id="texto-final" class="texto-final"><strong>ACABA AQUI PORQUE DÁ MT TRABALHO :)</strong></p>
+    </div>
+
+    <script>
+        function mostrarImagem(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function mostrarTextoFinal() {
+            document.getElementById("texto-final").style.display = 'block';
+        }
+    </script>
+</body>
+</html>
